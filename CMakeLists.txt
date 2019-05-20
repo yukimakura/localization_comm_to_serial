@@ -23,18 +23,3 @@ catkin_package(
   CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs tf tf2
   DEPENDS system_lib
 )
-
-###########
-## Build ##
-###########
-
-include_directories(
-  include
-  ${catkin_INCLUDE_DIRS}
-)
-
-add_executable(serial_parser_node src/serial_parser_node.cpp src/serial_parser.cpp)
-
-target_link_libraries(serial_parser_node
-  ${catkin_LIBRARIES}
-)
